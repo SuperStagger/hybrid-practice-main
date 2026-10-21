@@ -1,0 +1,13 @@
+{
+ "problem": "B3",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-10-20T21:02:12",
+ "answer": null,
+ "trace": null,
+ "error": "HybridError: invalid IR after retry: Unexpected error: invalid syntax (<unknown>, line 1)",
+ "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Ihor\\Downloads\\hybrid-practice-main\\src\\run.py\", line 41, in run_one\n    out = PIPELINES[name].solve(problem)\n  File \"C:\\Users\\Ihor\\Downloads\\hybrid-practice-main\\src\\hybrid.py\", line 188, in solve\n    raise HybridError(\"invalid IR after retry: \" + \"; \".join(errors))\nhybrid.HybridError: invalid IR after retry: Unexpected error: invalid syntax (<unknown>, line 1)\n",
+ "seconds": 2.2,
+ "llm_calls": 2
+}

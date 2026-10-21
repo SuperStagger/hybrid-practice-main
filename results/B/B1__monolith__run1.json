@@ -1,0 +1,24 @@
+{
+ "problem": "B1",
+ "pipeline": "monolith",
+ "run": 1,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-10-20T21:01:46",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Artem": 3,
+   "Bohdana": 2,
+   "Viktor": 4,
+   "Halyna": 5,
+   "Dmytro": 1
+  },
+  "objective": null
+ },
+ "trace": {
+  "reasoning": "Given the conditions, let's analyze the constraints step by step and determine the order of the queue. We start by noting that Dmytro is either at the very front or at the very back. Let's consider both scenarios and see if they satisfy all conditions. If Dmytro is at the front (position 1), then Bohdan cannot be at the front (condition 5), so Bohdan must be at position 2. Since Artem is directly behind Bohdan, Artem must be at position 3. Halyna cannot be at the back (condition 4), and since Viktor is in front of Halyna (condition 1), we can place Viktor at position 4. This leaves Halyna at position 5. This configuration satisfies all conditions. If Dmytro is at the back (position 5), then Artem cannot be at the back (condition 4), and Bohdan cannot be at the front (condition 5), so Bohdan must be at position 2. Artem is directly behind Bohdan, so Artem is at position 3. Viktor must be in front of Halyna (condition 1), so Viktor is at position 4. This leaves Halyna at position 1, but this violates condition 4. Therefore, Dmytro cannot be at the back. The only valid configuration is Dmytro at the front, Bohdan at position 2, Artem at position 3, Viktor at position 4, and Halyna at position 5. This configuration satisfies all conditions."
+ },
+ "error": null,
+ "seconds": 7.6,
+ "llm_calls": 1
+}

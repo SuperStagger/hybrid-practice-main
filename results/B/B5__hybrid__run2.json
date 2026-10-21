@@ -1,0 +1,104 @@
+{
+ "problem": "B5",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-10-20T21:02:29",
+ "answer": {
+  "status": "unique",
+  "solution": {
+   "Olena": "coffee",
+   "Petro": "juice",
+   "Maria": "tea"
+  },
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "Olena": [
+       "tea",
+       "coffee",
+       "juice"
+      ],
+      "Petro": [
+       "tea",
+       "coffee",
+       "juice"
+      ],
+      "Maria": [
+       "tea",
+       "coffee",
+       "juice"
+      ]
+     },
+     "all_different": [
+      [
+       "Olena",
+       "Petro",
+       "Maria"
+      ]
+     ],
+     "constraints": [
+      "Olena != 'tea'",
+      "Petro != 'coffee'",
+      "Maria != 'coffee' and Maria != 'juice'"
+     ]
+    },
+    "errors": [
+     "Invalid domain format for 'Olena'. Must be [lo, hi] or {'values': [...]}.",
+     "Invalid domain format for 'Petro'. Must be [lo, hi] or {'values': [...]}.",
+     "Invalid domain format for 'Maria'. Must be [lo, hi] or {'values': [...]}.",
+     "Syntax/Solver error: too many values to unpack (expected 2, got 3)"
+    ]
+   },
+   {
+    "ir": {
+     "variables": {
+      "Olena": [
+       0,
+       2
+      ],
+      "Petro": [
+       0,
+       2
+      ],
+      "Maria": [
+       0,
+       2
+      ]
+     },
+     "all_different": [
+      [
+       "Olena",
+       "Petro",
+       "Maria"
+      ]
+     ],
+     "constraints": [
+      "Olena != 0",
+      "Petro != 1",
+      "Maria != 1",
+      "Maria != 2"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "unique",
+   "n_solutions": 1,
+   "objective": null,
+   "first_solution": {
+    "Olena": 1,
+    "Petro": 2,
+    "Maria": 0
+   }
+  }
+ },
+ "error": null,
+ "seconds": 2.1,
+ "llm_calls": 3
+}

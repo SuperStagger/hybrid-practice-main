@@ -1,0 +1,151 @@
+{
+ "problem": "B2",
+ "pipeline": "hybrid",
+ "run": 2,
+ "model": "qwen2.5:3b",
+ "timestamp": "2026-10-20T21:02:03",
+ "answer": {
+  "status": "none",
+  "solution": {},
+  "objective": null
+ },
+ "trace": {
+  "attempts": [
+   {
+    "ir": {
+     "variables": {
+      "N": [
+       1,
+       9
+      ],
+      "O": [
+       1,
+       9
+      ],
+      "D": [
+       1,
+       9
+      ],
+      "E": [
+       1,
+       9
+      ],
+      "G": [
+       1,
+       9
+      ],
+      "R": [
+       1,
+       9
+      ],
+      "A": [
+       1,
+       9
+      ],
+      "H": [
+       1,
+       9
+      ]
+     },
+     "all_different": [
+      [
+       "N",
+       "O",
+       "D",
+       "E",
+       "G",
+       "R",
+       "A",
+       "H"
+      ]
+     ],
+     "constraints": [
+      "100*N + 10*O + D + 100*E + 10*G + R == 1000*G + 100*H + 10*A + R",
+      "N % 2 == 0",
+      "O > N",
+      "A == max([N, O, D, E, G, R, H])"
+     ]
+    },
+    "errors": [
+     "Syntax/Solver error: only abs() is allowed"
+    ]
+   },
+   {
+    "ir": {
+     "variables": {
+      "A": [
+       1,
+       9
+      ],
+      "N": [
+       1,
+       9
+      ],
+      "O": [
+       1,
+       9
+      ],
+      "D": [
+       1,
+       9
+      ],
+      "E": [
+       1,
+       9
+      ],
+      "G": [
+       1,
+       9
+      ],
+      "R": [
+       1,
+       9
+      ],
+      "H": [
+       1,
+       9
+      ],
+      "Y": [
+       1,
+       9
+      ],
+      "Z": [
+       1,
+       9
+      ]
+     },
+     "all_different": [
+      [
+       "A",
+       "N",
+       "O",
+       "D",
+       "E",
+       "G",
+       "R",
+       "H",
+       "Y",
+       "Z"
+      ]
+     ],
+     "constraints": [
+      "100*N + 10*O + D + 100*E + 10*G + R == 1000*G + 100*H + 10*E + Y",
+      "N % 2 == 0",
+      "O > N",
+      "Z == 9"
+     ]
+    },
+    "errors": []
+   }
+  ],
+  "solver": {
+   "status": "none",
+   "n_solutions": 0,
+   "objective": null,
+   "first_solution": null
+  }
+ },
+ "error": null,
+ "seconds": 2.9,
+ "llm_calls": 2
+}
